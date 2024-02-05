@@ -13,7 +13,7 @@ database.connect();
 app.use(express.json());
 app.use(bodyParser.json());
 const cron = require("./cron");
-//cron.updatepriority();
+cron.updatepriority();
 cron.calltwillio();
 app.use("/api/v1/task", taskRoutes);
 app.use("/api/v1/user", userRoutes);
